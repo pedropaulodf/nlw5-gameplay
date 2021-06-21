@@ -9,4 +9,4 @@ Explicação de conceitos e funcionalidades do React e React Native e a constru�
 Essa é minha terceira NLW e no primeiro dia já aprendi uma nova forma de organizar meus projetos, atalhos de funções na props e novos conceitos em Typescript (que está ficando cada vez mais simples de entender).
 
 ### Preview
-![Preview](https://github.com/pedropaulodf/nlw5-gameplay/blob/master/readme/readmeimg.png)
+![Preview](https://github.com/pedropaulodf/nlw5-gameplay/blob/master/readme/app-preview.png)
