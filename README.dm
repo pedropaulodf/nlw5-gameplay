@@ -1,4 +1,4 @@
-![Preview](https://github.com/pedropaulodf/nlw5-gameplay/blob/master/readme/readmeimg.png)
+https://github.com/pedropaulodf/nlw5-gameplay/blob/master/readme/readmeimg.png
 
 # NLW5 - GamePlay
 
