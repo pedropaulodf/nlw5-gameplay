@@ -1,4 +1,4 @@
-# NLW5 - GamePlay
+# NLW5 • React Native • App: GamePlay
 
 Projeto em desenvolvimento na NLW5#Together.
 
