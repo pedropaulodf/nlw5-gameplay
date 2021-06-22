@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View,Text, ScrollView } from 'react-native';
+import { View,Text, SafeAreaView } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { ButtonAdd } from '../../components/ButtonAdd';
 import { CategorySelect } from '../../components/CategorySelect';
@@ -32,7 +32,7 @@ export function Home() {
         id: '1',
         name: 'Yeah, boy',
         icon: null,
-        owner: true
+        owner: false
       },
       category: '2',
       date: '22/06 às 20:40h',
@@ -61,41 +61,77 @@ export function Home() {
       category: '4',
       date: '22/06 às 20:40h',
       description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10'
+    },
+    {
+      id: '5',
+      guild: {
+        id: '1',
+        name: 'Rumo ao topo',
+        icon: null,
+        owner: true
+      },
+      category: '3',
+      date: '22/06 às 20:40h',
+      description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10'
+    },
+    {
+      id: '6',
+      guild: {
+        id: '1',
+        name: 'Bora queimar tudo',
+        icon: null,
+        owner: true
+      },
+      category: '4',
+      date: '22/06 às 20:40h',
+      description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10'
+    },
+    {
+      id: '7',
+      guild: {
+        id: '1',
+        name: 'Bora queimar tudo',
+        icon: null,
+        owner: true
+      },
+      category: '4',
+      date: '22/06 às 20:45h',
+      description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10'
     }
   ];
 
 
   function handleCategorySelect(categoryId: string) {
     categoryId === category ? setCategory('') : setCategory(categoryId);
-
   }
 
   return (
-    <View >
-      <View style={styles.header}>
-        <Profile />
-        <ButtonAdd />
-      </View>
+    <View style={styles.container}>
+        <View style={styles.header}>
+          <Profile />
+          <ButtonAdd />
+        </View>
 
-      <CategorySelect
-        categorySelected={category}
-        setCategory={handleCategorySelect}
-      />
+        <CategorySelect
+          categorySelected={category}
+          setCategory={handleCategorySelect}
+        />
 
-      <View style={styles.content}>
-        <ListHeader 
-          title="Partidas agendadas"
-          subtitle="Total 6"
-        />
-        <FlatList 
-          data={appointments}
-          keyExtractor={item => item.id}
-          renderItem={({item}) => (<Appointment data={item}/>)}
-          ItemSeparatorComponent={() => <ListDivider />}
-          style={styles.matches}
-          showsVerticalScrollIndicator={false}
-        />
-      </View>
+        <View style={styles.content}>
+          <ListHeader 
+            title="Partidas agendadas"
+            subtitle="Total 6"
+          />
+          <FlatList 
+            data={appointments}
+            keyExtractor={item => item.id}
+            renderItem={({item}) => (<Appointment data={item} />)}
+            ItemSeparatorComponent={() => <ListDivider />}
+            style={styles.matches}
+            showsVerticalScrollIndicator={false}
+            
+          />
+        </View>
 
     </View>
   )
