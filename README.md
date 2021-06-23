@@ -19,3 +19,13 @@ Em 2:40 de aula, realmente um aulão, muuita coisa aprendida: aprendi gradiente,
 
 ### Preview
 <img src="https://github.com/pedropaulodf/nlw5-gameplay/blob/master/readme/app-day2.png" alt="App Day 2" width="200"/>
+
+## Dia 3:
+Criação de mais duas páginas, a de criação do agendamento de partidas e do Modal. Também fizemos vários ajustes no código e layout das telas criadas.
+
+### Obs. pessoal:
+Aula sólida, o Rodrigo ensina muito bem. Aprendi como usar o Modal do Expo, muito bom. Continuo abrindo a minha mente em como usar melhor os recursos do React Native e como manter o projeto conciso, padronizado e bem organizado. Ansioso para as próximas aulas, para preencher todos os dados de maneira dinâmica.
+
+### Preview
+<img src="https://github.com/pedropaulodf/nlw5-gameplay/blob/master/readme/app-day3-1.png" alt="App Day 3-1" width="200"/>
+<img src="https://github.com/pedropaulodf/nlw5-gameplay/blob/master/readme/app-day3-2.png" alt="App Day 3-2" width="200"/>
