@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View,Text, SafeAreaView } from 'react-native';
+import { View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { ButtonAdd } from '../../components/ButtonAdd';
 import { CategorySelect } from '../../components/CategorySelect';
@@ -112,11 +112,15 @@ export function Home() {
     navigation.navigate('AppointmentDetails');
   }
 
+  function handleAppointmentCreate(){
+    navigation.navigate('AppointmentCreate');
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Profile />
-        <ButtonAdd />
+        <ButtonAdd onPress={handleAppointmentCreate} />
       </View>
 
       <CategorySelect

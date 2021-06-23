@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
   },
   members: {
     marginLeft: 24,
-    marginTop: 18
+    marginTop: 18,
   },
   footer: {
     paddingHorizontal: 24,
