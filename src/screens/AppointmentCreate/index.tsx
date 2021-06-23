@@ -32,33 +32,6 @@ export function AppointmentCreate() {
     setOpenGuildsModal(false);
   }
 
-  const members = [
-    {
-      id: '1',
-      username: 'Pedro Paulo',
-      avatar_url: 'https://github.com/pedropaulodf.png',
-      status: 'online'
-    },
-    {
-      id: '2',
-      username: 'Ana Pereira',
-      avatar_url: 'https://github.com/pedropaulodf.png',
-      status: 'offline'
-    },
-    {
-      id: '3',
-      username: 'Peter Parker',
-      avatar_url: 'https://github.com/pedropaulodf.png',
-      status: 'online'
-    },
-    {
-      id: '4',
-      username: 'Peter Quill',
-      avatar_url: 'https://github.com/pedropaulodf.png',
-      status: 'online'
-    }
-  ]
-
   return (
     <KeyboardAvoidingView
       style={styles.container}

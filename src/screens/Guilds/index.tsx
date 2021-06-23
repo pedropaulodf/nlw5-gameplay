@@ -16,13 +16,13 @@ export function Guilds({ handleGuildSelected }:Props) {
     {
       id: '1',
       name: 'Lendários',
-      icon: null,
+      icon: 'imagem.png',
       owner: true
     },
     {
       id: '2',
       name: 'Rumo ao topo',
-      icon: null,
+      icon: 'imagem.png',
       owner: true
     }
   ]
