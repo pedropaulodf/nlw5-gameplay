@@ -8,13 +8,13 @@ export function Profile() {
 
   const { user } = useAuth();
   
-  const textos = [
-    "Hoje é dia de conquista",
-    "Hoje a vitória será sua!",
-    "Hoje GG não escapa",
-    "Hoje é dia de ganhar"
-  ];
-  const randomIndex = Math.floor(Math.random() * 4);
+  // const textos = [
+  //   "Hoje é dia de conquista",
+  //   "Hoje a vitória será sua!",
+  //   "Hoje GG não escapa",
+  //   "Hoje é dia de ganhar"
+  // ];
+  // const randomIndex = Math.floor(Math.random() * 4);
 
   return (
     <View style={styles.container}>
@@ -33,7 +33,7 @@ export function Profile() {
         </View>
 
         <Text style={styles.message}>
-          { textos[randomIndex] }
+          Hoje é dia de conquista
         </Text>
       </View>
 

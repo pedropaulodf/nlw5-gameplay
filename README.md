@@ -29,3 +29,9 @@ Aula sólida, o Rodrigo ensina muito bem. Aprendi como usar o Modal do Expo, mui
 ### Preview
 <img src="https://github.com/pedropaulodf/nlw5-gameplay/blob/master/readme/app-day3-1.png" alt="App Day 3-1" width="200"/>
 <img src="https://github.com/pedropaulodf/nlw5-gameplay/blob/master/readme/app-day3-2.png" alt="App Day 3-2" width="200"/>
+
+## Dia 4:
+Login do app com o Discord. Login usando o OAuth2 junto com o Expo AuthSession de forma manual, onde podemos usar em vários tipos de implementações. Criação de React Hooks.
+
+### Obs. pessoal:
+Aula sensacional, entendi como funciona o OAuth2, como fazer autenticação, como usar rotas protegidas, mais noções de organização de pastas, como services, hooks, configs e mais. Aprendi a como criar e como funciona um Hook personalizado.
