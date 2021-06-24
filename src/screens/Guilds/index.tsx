@@ -24,6 +24,30 @@ export function Guilds({ handleGuildSelected }:Props) {
       name: 'Rumo ao topo',
       icon: 'imagem.png',
       owner: true
+    },
+    {
+      id: '3',
+      name: 'Rumo ao topo',
+      icon: 'imagem.png',
+      owner: true
+    },
+    {
+      id: '4',
+      name: 'Rumo ao topo',
+      icon: 'imagem.png',
+      owner: true
+    },
+    {
+      id: '5',
+      name: 'Rumo ao topo',
+      icon: 'imagem.png',
+      owner: true
+    },
+    {
+      id: '6',
+      name: 'Rumo ao topo',
+      icon: 'imagem.png',
+      owner: true
     }
   ]
 
@@ -38,8 +62,10 @@ export function Guilds({ handleGuildSelected }:Props) {
             onPress={() => handleGuildSelected(item)}
           />
         )}
-        ItemSeparatorComponent={() => <ListDivider />}
+        ItemSeparatorComponent={() => <ListDivider isCentered />}
+        ListHeaderComponent={() => <ListDivider isCentered />}
         style={styles.guilds}
+        contentContainerStyle={{paddingBottom: 60, paddingTop: 60}}
       />
     </View>
   )
