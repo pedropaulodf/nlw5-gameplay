@@ -31,7 +31,8 @@ export const styles = StyleSheet.create({
   image: {
     width: 68,
     height: 68,
-    backgroundColor: theme.colors.secondary50,
+    backgroundColor: theme.colors.secondary40,
+    borderColor: theme.colors.secondary50,
     borderWidth: 1,
     borderRadius: 8,
     marginLeft: -1,
