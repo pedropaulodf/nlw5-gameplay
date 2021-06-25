@@ -87,7 +87,7 @@ export function Home() {
             contentContainerStyle={{paddingBottom: 60}}
           />
         </View>
-}
+      }
 
     </View>
   )

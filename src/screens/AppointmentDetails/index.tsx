@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Fontisto } from '@expo/vector-icons'
 import { useRoute } from '@react-navigation/native'
 import { BorderlessButton } from 'react-native-gesture-handler'
-import { View, Text, ImageBackground, FlatList, Alert } from 'react-native'
+import { View, Text, ImageBackground, FlatList, Alert, Share, Platform } from 'react-native'
+import * as Linking from 'expo-linking'
 
 import { Background } from '../../components/Background'
 import { ListHeader } from '../../components/ListHeader'
@@ -33,7 +34,7 @@ type GuildWidget = {
 export function AppointmentDetails() {
 
   const [widget, setWidget] = useState<GuildWidget>({} as GuildWidget);
-
+  
   const [loading, setLoading] = useState(true);
 
   const route = useRoute();
@@ -52,27 +53,40 @@ export function AppointmentDetails() {
     }
   }
 
+  function handleShareInvitation(){
+    const message = Platform.OS === 'ios' 
+    ? `Junte-se a ${guildSelected.guild.name}`
+    : widget.instant_invite;
+
+    Share.share({
+      message,
+      url: widget.instant_invite
+    })
+
+  }
+
+  function handleOpenGuild(){
+    Linking.openURL(widget.instant_invite);
+  }
+
   useEffect(() => {
     fetchGuildWidget();
   }, []);
-
-
-  ////////// Parei no 1:43 youtube
-
 
   return (
     <Background>
       <Header 
         title="Detalhes"
         action={
-        <BorderlessButton>
-          <Fontisto 
-            name="share"
-            size={20}
-            color={theme.colors.primary}
-          />
-        </BorderlessButton>
-      }
+          guildSelected.guild.owner && 
+          <BorderlessButton onPress={handleShareInvitation} >
+            <Fontisto 
+              name="share"
+              size={20}
+              color={theme.colors.primary}
+            />
+          </BorderlessButton>
+        }
       />
 
       <ImageBackground
@@ -113,9 +127,15 @@ export function AppointmentDetails() {
         </>
       }
 
-      <View style={styles.footer}>
-        <ButtonIcon title="Entrar na partida" />
-      </View>
+      {
+        guildSelected.guild.owner &&
+        <View style={styles.footer}>
+          <ButtonIcon 
+            title="Entrar na partida" 
+            onPress={handleOpenGuild}
+          />
+        </View>
+      }
 
     </Background>
   )

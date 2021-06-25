@@ -25,6 +25,7 @@ type AuthContextData = {
   user: User;
   loading: boolean;
   signIn: () => Promise<void>;
+  signOut: () => Promise<void>;
 }
 
 type AuthProviderProps = {
@@ -55,6 +56,7 @@ function AuthProvider({children}: AuthProviderProps){
       .startAsync({ authUrl }) as AuthorizationResponse;
 
       if(type === 'success' && !params.error){
+        console.log(params);
         api.defaults.headers.authorization = `Bearer ${params.access_token}`;
         
         const userInfo = await api.get('/users/@me');
@@ -80,6 +82,11 @@ function AuthProvider({children}: AuthProviderProps){
     }
   }
 
+  async function signOut() {
+    setUser({} as User);
+    await AsyncStorage.removeItem(COLLECTION_USERS);
+  }
+
   async function loadUserStorageData() {
     const storage = await AsyncStorage.getItem(COLLECTION_USERS);
 
@@ -96,7 +103,7 @@ function AuthProvider({children}: AuthProviderProps){
   }, [])
 
   return (
-    <AuthContext.Provider value={{ user, signIn, loading }}>
+    <AuthContext.Provider value={{ user, signIn, signOut, loading }}>
       {children}
     </AuthContext.Provider>
   )
