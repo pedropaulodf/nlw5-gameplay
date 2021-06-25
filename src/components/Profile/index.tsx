@@ -15,7 +15,7 @@ export function Profile() {
   //   "Hoje é dia de ganhar"
   // ];
   // const randomIndex = Math.floor(Math.random() * 4);
-
+  
   return (
     <View style={styles.container}>
 

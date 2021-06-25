@@ -12,7 +12,7 @@ export function ListDivider({ isCentered }:Props) {
     <View 
       style={[styles.container, 
         isCentered ? {
-          width: '72%',
+          width: '100%',
           marginVertical: 10,
           // marginTop: 20,
           // marginBottom: 20,
