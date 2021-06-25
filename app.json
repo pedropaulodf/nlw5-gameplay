@@ -24,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0E1647"
-      }
+      },
+      "package": "com.pedropaulodf.GamePlay"
     },
     "web": {
       "favicon": "./assets/favicon.png"
