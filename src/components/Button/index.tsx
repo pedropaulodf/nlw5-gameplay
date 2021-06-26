@@ -6,12 +6,14 @@ import { styles } from './styles'
 
 type Props = RectButtonProps & {
   title: String;
+  buttonEnable?: boolean;
 }
 
-export function Button({title, ...rest} : Props) {
+export function Button({title, buttonEnable, ...rest} : Props) {
   return (
     <RectButton 
-      style={styles.container} 
+      style={[styles.container, !buttonEnable ? {opacity: 0.4} : {}]} 
+      enabled={buttonEnable}
       {...rest}
     >
       <Text style={styles.title} >

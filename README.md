@@ -35,3 +35,12 @@ Login do app com o Discord. Login usando o OAuth2 junto com o Expo AuthSession d
 
 ### Obs. pessoal:
 Aula sensacional, entendi como funciona o OAuth2, como fazer autenticação, como usar rotas protegidas, mais noções de organização de pastas, como services, hooks, configs e mais. Aprendi a como criar e como funciona um Hook personalizado.
+
+## Dia 5:
+Texto.
+
+### Obs. pessoal:
+Texto.
+
+Extras:
+react-native-easy-toast
