@@ -37,10 +37,11 @@ Login do app com o Discord. Login usando o OAuth2 junto com o Expo AuthSession d
 Aula sensacional, entendi como funciona o OAuth2, como fazer autenticação, como usar rotas protegidas, mais noções de organização de pastas, como services, hooks, configs e mais. Aprendi a como criar e como funciona um Hook personalizado.
 
 ## Dia 5:
-Texto.
+O última dia de aula o professor fez um recap de tudo que tínhamos feito até o momento, corrigiu bugs e finalizados o app com algumas dicas para a milha extra.
 
 ### Obs. pessoal:
-Texto.
+Só tenho a agradecer a equipe da Rocketseat, em especial o Rodrigo. Essa NLW#Together me ensinou bastante, autenticação com oAuth2, como usar melhor SVG no RN, React Hooks, como organizar meu projeto melhor e como componentizar melhor meu app. Aprendi a como usar melhor o AsyncStorage (que já vou aplicar no app no pessoal que estou desenvolvendo junto com o oAuth2 também!). Ele deu dicas sobre características de situações no Android e iOS e como foi tudo em Typescript, está cada vez mais fácil de entender e mais motivado a começar a usar ele de verdade. Obrigado pessoal!
 
-Extras:
-react-native-easy-toast
+### Milhas extras:
+- Validação do formulário com a desabilitação do botão de enviar.
+- Uso da lib react-native-easy-toast para mostrar Toasts para o usuário na validação do form.

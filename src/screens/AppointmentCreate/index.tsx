@@ -41,13 +41,13 @@ export function AppointmentCreate() {
   function handleChangeDay(value: string){
 
     if (value.length === 2 && value === '00') {
-      toastRef.current.show('Dia inválido! 1~31', 2000);
+      toastRef.current.show('Dia inválido! Vai de 1 até 31', 2000);
       setDay('');
       return;
     }
 
     if(parseInt(value) > 31){
-      toastRef.current.show('Dia inválido! 1~31', 2000);
+      toastRef.current.show('Dia inválido! Vai de 1 até 31', 2000);
       setDay('');
       return;
     }
