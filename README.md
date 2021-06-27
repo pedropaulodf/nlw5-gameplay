@@ -1,8 +1,7 @@
 # :rocket: NLW#Together • React Native • App: GamePlay
 
-Projeto desenvolvido na NLW#Together • 06/2021
-
 <img src="https://github.com/pedropaulodf/nlw5-gameplay/blob/master/readme/app-completo.gif" alt="App finalizado" width="400"/>
+Projeto desenvolvido na NLW#Together • 06/2021
 
 ## :rocket: Dia 1:
 Explicação de conceitos e funcionalidades do React e React Native e a construção da SplashScreen e tela de SignIn. 
