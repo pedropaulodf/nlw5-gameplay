@@ -22,7 +22,7 @@ export function Home() {
   const [category, setCategory] = useState('');
   const [loading, setLoading] = useState(true);
   const [appointments, setAppointments] = useState<AppointmentProps[]>([]);
-
+  
   function handleCategorySelect(categoryId: string) {
     categoryId === category ? setCategory('') : setCategory(categoryId);
   }

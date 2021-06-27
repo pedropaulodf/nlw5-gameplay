@@ -1,4 +1,3 @@
-import { Inter_200ExtraLight } from "@expo-google-fonts/inter";
 import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
 
@@ -18,5 +17,11 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.secondary30,
     alignSelf: 'center',
     marginTop: 13
-  }
+  },
+  containerLogout: {
+    width: '100%',
+    height: 150,
+    position: 'absolute',
+    bottom: 0,
+  },
 });

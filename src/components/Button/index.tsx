@@ -1,24 +1,24 @@
 import React from 'react'
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler'
-import { Text } from 'react-native'
+import { Text, Pressable, PressableProps } from 'react-native'
 
 import { styles } from './styles'
 
-type Props = RectButtonProps & {
+type Props = PressableProps & {
   title: String;
   buttonEnable?: boolean;
 }
 
 export function Button({title, buttonEnable, ...rest} : Props) {
   return (
-    <RectButton 
+    <Pressable 
       style={[styles.container, !buttonEnable ? {opacity: 0.4} : {}]} 
-      enabled={buttonEnable}
+      disabled={!buttonEnable}
       {...rest}
     >
       <Text style={styles.title} >
         {title}
       </Text>
-    </RectButton>
+    </Pressable>
   )
 }

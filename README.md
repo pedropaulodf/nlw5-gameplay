@@ -45,3 +45,7 @@ Só tenho a agradecer a equipe da Rocketseat, em especial o Rodrigo. Essa NLW#To
 ### Milhas extras:
 - Validação do formulário com a desabilitação do botão de enviar.
 - Uso da lib react-native-easy-toast para mostrar Toasts para o usuário na validação do form.
+- Implementação do modal de Logout.
+- Uso do Botão Pressable para pode usar o component Button em mais locais.
+- Ajuste com 3 pontos no final dos nomes das partidas agendadas, quando o nome for grande.
+- Implementação da imagem dinâmica e com sombra nos detalhes do agendamento.

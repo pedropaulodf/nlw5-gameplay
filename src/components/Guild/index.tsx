@@ -28,7 +28,7 @@ export function Guild({data, ...rest} : Props) {
 
       <View style={styles.content}>
         <View>
-          <Text style={styles.title}>
+          <Text style={styles.title} numberOfLines={1}>
             {data.name}
           </Text>
 

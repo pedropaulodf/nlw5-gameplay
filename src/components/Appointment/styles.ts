@@ -1,4 +1,3 @@
-import { Inter_100Thin } from "@expo-google-fonts/inter";
 import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
 
@@ -21,6 +20,8 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.title700,
     color: theme.colors.heading,
     fontSize: 18,
+    flex: 1,
+    paddingRight: 2
   },
   category: {
     fontFamily: theme.fonts.text400,

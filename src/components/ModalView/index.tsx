@@ -7,11 +7,13 @@ import { styles } from './styles'
 type Props = ModalProps & {
   children: ReactNode;
   closeModal: () => void;
+  modalType?: string;
 }
 
 export function ModalView({
   children, 
   closeModal,
+  modalType,
   ...rest}: Props) {
   return (
     <Modal
@@ -22,9 +24,9 @@ export function ModalView({
     >
       <TouchableWithoutFeedback onPress={closeModal}>
         <View style={styles.overlay}>
-          <View style={styles.container}>
+          <View style={modalType === "logout" ? styles.containerLogout : styles.container}>
             <Background>
-              <View style={styles.bar} />
+              {!modalType && <View style={styles.bar} />}
                 {children}
             </Background>
           </View>

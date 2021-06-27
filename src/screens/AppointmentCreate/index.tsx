@@ -131,7 +131,7 @@ export function AppointmentCreate() {
 
   // Função que checa se todos os valores estão corretos e ativa ou desativa o botão
   function checkBlankFormValues(){
-    if (day !== '' && month !== '' && hour !== '' && minute !== '' && description !== '' && category !== '' && guild.id !== 'undefined') {
+    if (day !== '' && month !== '' && hour !== '' && minute !== '' && description !== '' && category !== '' && guild.id !== undefined) {
       setButtonSaveEnabled(true);
       return true;
     }else{

@@ -18,6 +18,7 @@ import { styles } from './styles'
 import { theme } from '../../global/styles/theme'
 import { AppointmentProps } from '../../components/Appointment'
 import { api } from '../../services/api'
+import { LinearGradient } from 'expo-linear-gradient'
 
 type Params = {
   guildSelected: AppointmentProps;
@@ -31,14 +32,19 @@ type GuildWidget = {
   presence_count: number;
 }
 
+const { CDN_IMAGE } = process.env;
+
 export function AppointmentDetails() {
 
+
   const [widget, setWidget] = useState<GuildWidget>({} as GuildWidget);
-  
+
   const [loading, setLoading] = useState(true);
 
   const route = useRoute();
   const { guildSelected } = route.params as Params;
+
+  const uri = `${CDN_IMAGE}/icons/${guildSelected.guild.id}/${guildSelected.guild.icon}.png`;
 
   async function fetchGuildWidget() {
     try {
@@ -88,23 +94,27 @@ export function AppointmentDetails() {
           </BorderlessButton>
         }
       />
+      
+        <ImageBackground
+          source={{uri}}
+          style={styles.banner}
+        >
+          <LinearGradient
+            style={{position:'absolute',width:'100%',height:'100%'}}
+            colors={['rgba(0,0,0,0.00)','rgba(0,0,0,0.00)', 'rgba(0,0,0,0.80)']}
+          >
+            <View style={styles.bannerContent}>
+              <Text style={styles.title}>
+                { guildSelected.guild.name }
+              </Text>
 
-      <ImageBackground
-        source={BannerImg}
-        style={styles.banner}
-      >
-        <View style={styles.bannerContent}>
-          <Text style={styles.title}>
-            { guildSelected.guild.name }
-          </Text>
+              <Text style={styles.subtitle}>
+                { guildSelected.description }
+              </Text>
+            </View>
 
-          <Text style={styles.subtitle}>
-            { guildSelected.description }
-          </Text>
-        </View>
-
-      </ImageBackground>
-
+          </LinearGradient>
+        </ImageBackground>
       {
         loading ? <Load /> :
         <>
