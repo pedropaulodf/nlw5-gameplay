@@ -58,7 +58,7 @@ export function Profile() {
             Olá,
           </Text>
 
-          <Text style={styles.username} numberOfLines={1}>
+          <Text style={styles.username} numberOfLines={1} ellipsizeMode='tail'>
             { user.firstName }
           </Text>
         </View>
